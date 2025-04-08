@@ -1,6 +1,6 @@
 <!-- Modifying this file will impact your performance -->
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<script src="/scripts/fallback.js" nomodule></script>
+<script src="/elearningmilo/scripts/fallback.js" nomodule></script>
 <script>
   const libs = (() => {
     const { hostname, search } = window.location;
@@ -15,19 +15,19 @@
   const miloDecorate = document.createElement('link');
 
   miloStyles.setAttribute('as', 'style');
-  miloStyles.setAttribute('href', `${libs}/styles/styles.css`);
+  miloStyles.setAttribute('href', `${libs}/elearningmilo/styles/styles.css`);
 
   [miloUtils, miloDecorate].forEach((tag) => {
     tag.setAttribute('crossorigin', 'true');
     tag.setAttribute('as', 'script');
   })
 
-  miloUtils.setAttribute('href', `${libs}/utils/utils.js`);
-  miloDecorate.setAttribute('href', `${libs}/utils/decorate.js`);
+  miloUtils.setAttribute('href', `${libs}/elearningmilo/utils/utils.js`);
+  miloDecorate.setAttribute('href', `${libs}/elearningmilo/utils/decorate.js`);
 
   [miloStyles, miloUtils, miloDecorate].forEach((tag) => tag.setAttribute('rel', 'preload'));
   document.head.append(miloStyles, miloUtils, miloDecorate);
 </script>
-<script src="/scripts/scripts.js" type="module"></script>
+<script src="/elearningmilo/scripts/scripts.js" type="module"></script>
 <style>body { display: none; }</style>
 <link rel="icon" href="data:,">
